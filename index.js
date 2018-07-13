@@ -11,7 +11,7 @@ function init() {
 function middleware(app, plugin, generalConfig) {
     const connection = mongoose.createConnection(`${generalConfig.mongoUri}`);
     debug('Loading stadistics-plugin');
-    app.use(stadisticService(connection, plugin).middleware);
+    app.use(stadisticService(connection).middleware);
     app.use(stadisticRouter(connection).middleware());
 }
 
