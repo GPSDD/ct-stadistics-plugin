@@ -5,12 +5,12 @@ const debug = require('debug')('stadistics-plugin');
 const StadisticService = require('./lib/stadistic.service');
 
 module.exports = function cron(plugin, generalConfig) {
-    debug('Loading stadistics cron');
+    debug('Loading statistics cron');
     const connection = mongoose.createConnection(`${generalConfig.mongoUri}`);
     const stadisticService = new StadisticService(connection);
     async function tick() {
         try {
-            debug('Executing tick in stadistics microservice');
+            debug('Executing tick in statistics microservice');
             await stadisticService.completeGeoInfo();
         } catch (error) {
             debug('Error: ', error);
