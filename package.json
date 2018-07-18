@@ -1,6 +1,6 @@
 {
   "name": "ct-stadistics-plugin",
-  "version": "1.4.2-data4sdgs",
+  "version": "1.4.3-data4sdgs",
   "description": "",
   "main": "index.js",
   "scripts": {
